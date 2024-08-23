@@ -10637,21 +10637,12 @@ describe('Validators', () => {
       // to be used later on for validating 'any' locale
       if (fixture.valid) allValid = allValid.concat(fixture.valid);
 
-      if (Array.isArray(fixture.locale)) {
-        test({
-          validator: 'isMobilePhone',
-          valid: fixture.valid,
-          invalid: fixture.invalid,
-          args: [fixture.locale],
-        });
-      } else {
-        test({
-          validator: 'isMobilePhone',
-          valid: fixture.valid,
-          invalid: fixture.invalid,
-          args: [fixture.locale],
-        });
-      }
+      test({
+        validator: 'isMobilePhone',
+        valid: fixture.valid,
+        invalid: fixture.invalid,
+        args: [fixture.locale],
+      });
     });
 
     test({
